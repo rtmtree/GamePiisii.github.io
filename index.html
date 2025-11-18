@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GamePiisii — Retro PC games on iOS</title>
+    <meta name="description" content="GamePiisii lets you enjoy your retro PC games on iPhone and iPad with a clean, touch-friendly experience." />
+    <meta name="theme-color" content="#1e73be" />
+    <link rel="icon" type="image/png" href="artwork.png" />
+    <meta name="apple-itunes-app" content="app-id=6754588684" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gamepiisii.github.io/" />
+    <meta property="og:title" content="GamePiisii" />
+    <meta property="og:description" content="App to enjoy your retro PC game on iOS." />
+    <meta property="og:image" content="https://gamepiisii.github.io/artwork.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="GamePiisii" />
+    <meta name="twitter:description" content="App to enjoy your retro PC game on iOS." />
+    <meta name="twitter:image" content="https://gamepiisii.github.io/artwork.png" />
+
+    <style>
+      :root {
+        --bg: #0f65b5;
+        --bg-alt: #0d5aa3;
+        --text: #0b1b2b;
+        --muted: #294c6b;
+        --card: #ffffff;
+        --primary: #0f65b5;
+        --primary-contrast: #ffffff;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 20% 0%, var(--bg) 0%, var(--bg-alt) 100%);
+        display: grid;
+        place-items: center;
+      }
+      .container {
+        width: 100%;
+        max-width: 880px;
+        padding: 32px 20px;
+      }
+      .card {
+        background: var(--card);
+        border-radius: 16px;
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(5, 33, 58, 0.2);
+        text-align: center;
+      }
+      .logo {
+        width: 128px;
+        height: 128px;
+        border-radius: 24px;
+        box-shadow: 0 6px 20px rgba(15, 101, 181, 0.35);
+      }
+      h1 {
+        margin: 16px 0 8px;
+        font-size: 2.25rem;
+        letter-spacing: -0.02em;
+      }
+      .tagline {
+        margin: 0 auto 20px;
+        max-width: 42ch;
+        color: var(--muted);
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+      .cta {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0 6px;
+      }
+      .btn {
+        appearance: none;
+        border: none;
+        border-radius: 10px;
+        padding: 12px 18px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.08s ease, box-shadow 0.2s ease, background 0.2s ease;
+      }
+      .btn.primary {
+        background: var(--primary);
+        color: var(--primary-contrast);
+        box-shadow: 0 6px 18px rgba(15, 101, 181, 0.35);
+      }
+      .btn.primary:hover { transform: translateY(-1px); }
+      .btn.ghost {
+        background: transparent;
+        color: var(--primary);
+        border: 2px solid rgba(15, 101, 181, 0.3);
+      }
+      .note {
+        margin-top: 6px;
+        font-size: 0.95rem;
+        color: var(--muted);
+      }
+      footer {
+        margin-top: 28px;
+        color: rgba(11, 27, 43, 0.7);
+        font-size: 0.9rem;
+      }
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="card" aria-labelledby="app-name">
+        <img class="logo" src="artwork.png" alt="GamePiisii app logo" width="128" height="128" />
+        <h1 id="app-name">GamePiisii</h1>
+        <p class="tagline">App to enjoy your retro PC game on iOS.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://apps.apple.com/th/app/gamepiisii/id6754588684" target="_blank" rel="noopener">Download on the App&nbsp;Store</a>
+          <a class="btn ghost" href="https://discord.gg/TnvxGgYe" target="_blank" rel="noopener">Join Discord</a>
+          <a class="btn ghost" href="https://www.facebook.com/profile.php?id=61583135302506" target="_blank" rel="noopener">Facebook Page</a>
+        </div>
+        <p class="note">Available for iPhone & iPad. Requires iOS 15 or later.</p>
+        <footer>
+          © <span id="year"></span> GamePiisii
+        </footer>
+      </section>
+    </main>
+    <script>
+      // Keep the copyright year current without needing a build step
+      (function () {
+        var y = new Date().getFullYear();
+        var el = document.getElementById("year");
+        if (el) el.textContent = String(y);
+      })();
+    </script>
+  </body>
+</html>
+
+
